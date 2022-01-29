@@ -15,7 +15,7 @@ res_img2 = cv2.resize(img2, dim, interpolation = cv2.INTER_AREA)
 print(res_img1.shape)
 print(res_img2.shape)
 
-img3 = cv2.bitwise_and(res_img1,res_img2)
+img3 = cv2.bitwise_not(cv2.bitwise_or(res_img1,res_img2))
 
 cv2.imshow('new',img3)
 cv2.waitKey()
